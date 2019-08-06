@@ -14,7 +14,6 @@ class Scraper
     new_hash[:location] = student.css("p.student-location").text.strip
     new_hash[:profile_url] = "https://learn-co-curriculum.github.io/" + (student.attribute("href").value)
     student_array << new_hash
-    binding.pry
   end
   student_array
   end
