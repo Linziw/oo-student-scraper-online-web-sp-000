@@ -21,6 +21,7 @@ class CommandLineInterface
     Student.all.each do |student|
       attributes = Scraper.scrape_profile_page(BASE_PATH + student.profile_url)
       student.add_student_attributes(attributes)
+      binding.pry
       end
   end
 
